@@ -2,11 +2,11 @@
 http://github.com/JChristensen/extEEPROM
 ReadMe file  
 Jack Christensen Jul 2014
-
+Angus McIntyre Nov 2020
 ![CC BY-SA](http://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png)
 
 ## Introduction ##
-**Arduino External EEPROM Library for Microchip 24xx1025**
+**Arduino External EEPROM Library modified for Microchip 24xx1025**
 
 This library will work with most I2C serial EEPROM chips between 2k bits and 2048k bits (2M bits) in size. Multiple EEPROMs on the bus are supported as a single address space. I/O across block, page and device boundaries is supported. Certain assumptions are made regarding the EEPROM device addressing. These assumptions should be true for most EEPROMs but there are exceptions, so read the datasheet and know your hardware. 
 
