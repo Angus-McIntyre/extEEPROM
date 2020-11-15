@@ -6,20 +6,13 @@ Jack Christensen Jul 2014
 ![CC BY-SA](http://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png)
 
 ## Introduction ##
-**Arduino External EEPROM Library**
+**Arduino External EEPROM Library for Microchip 24xx1025**
 
 This library will work with most I2C serial EEPROM chips between 2k bits and 2048k bits (2M bits) in size. Multiple EEPROMs on the bus are supported as a single address space. I/O across block, page and device boundaries is supported. Certain assumptions are made regarding the EEPROM device addressing. These assumptions should be true for most EEPROMs but there are exceptions, so read the datasheet and know your hardware. 
 
 The library should also work for EEPROMs smaller than 2k bits, assuming that there is only one EEPROM on the bus and also that the user is careful to not exceed the maximum address for the EEPROM. 
 
-The **extEEPROM Library** has been tested with:
-- Microchip 24AA02E48 (2k bit)
-- 24xx32 (32k bit, thanks to Richard M)
-- Microchip 24LC256 (256k bit)
-- Microchip 24FC1026 (1M bit, thanks to Gabriele B on the Arduino forum)
-- ST Micro M24M02 (2M bit)
-
-The **extEEPROM Library** will **NOT** work with Microchip 24xx1025 as its control byte does not conform to the following assumptions.
+This fork of **extEEPROM Library** will **ONLY** work with Microchip 24xx1025 as its control byte does not conform to the following assumptions.
 
 **Device addressing assumptions:**
 - The I2C address sequence consists of a control byte followed by one address byte (for EEPROMs <= 16k bits) or two address bytes (for EEPROMs > 16k bits).
