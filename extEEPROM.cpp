@@ -126,7 +126,7 @@ byte extEEPROM::write(unsigned long addr, byte *values, unsigned int nBytes)
         // Move some bits around
         ctrlByte = (ctrlByte & ~(0x7))
                  | (((ctrlByte >> 0) & 0x1) << 2)
-                 | (((ctrlByte >> 1) & 0x3) << 0)
+                 | (((ctrlByte >> 1) & 0x3) << 0);
         Wire.beginTransmission(ctrlByte);
         if (_nAddrBytes == 2) Wire.write( (byte) (addr >> 8) );   //high addr byte
         Wire.write( (byte) addr );                                //low addr byte
